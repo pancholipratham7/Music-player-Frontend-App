@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Player</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="js/music-list.js"></script>
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top-bar">
+        <i class="material-icons">expand_more</i>
+        <span class="now-playing">Now Playing</span>
+        <i class="material-icons">more_horiz</i>
+      </div>
+      <div class="image-area">
+        <img class="song-image" src="images" alt="" />
+      </div>
+      <div class="song-details">
+        <p class="song-name"></p>
+        <p class="artist"></p>
+      </div>
+      <div class="progress-area">
+        <div class="progress-bar"></div>
+        <div class="timer">
+          <span class="start-time">0:00</span>
+          <span class="end-time">3:36</span>
+        </div>
+        <audio id="main-audio" src="songs" preload="auto"></audio>
+      </div>
+      <div class="song-control-options">
+        <!-- <i class="material-icons md-18"> shuffle </i> -->
+        <i title="Playlist looped" class="material-icons md-18 repeat-playlist"
+          >repeat</i
+        >
+        <i id="prev" class="material-icons md-24">skip_previous</i>
+        <div class="play-pause-button">
+          <i class="material-icons md-36 play-pause-icon">play_arrow</i>
+        </div>
+        <i id="next" class="material-icons md-48">skip_next</i>
+        <i class="material-icons md-64 playlist-button">queue_music</i>
+      </div>
+      <div class="music-list">
+        <div class="playlist-top-bar">
+          <div class="p">
+            <i class="material-icons playlist-icon"> queue_music</i>
+            <span class="playlist-top-bar-heading">Music List</span>
+          </div>
+          <i class="material-icons playlist-close">close</i>
+        </div>
+        <div class="song-list-area">
+          <ul class="playlist"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
